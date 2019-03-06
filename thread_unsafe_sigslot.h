@@ -1,7 +1,7 @@
 // created By MarvinZhai
 // http://sigslot.sourceforge.net/sigslot.pdf
 // Notice:
-// 1）signal Only Connect One slot
+// 1) signal Only Connect One slot
 // 2) args Lifetime, Copyable is recommended 
 
 #if __cplusplus < 201103L
@@ -167,4 +167,4 @@ using signal7 = _signalN<a1, a2, a3, a4, a5, a6, a7>;
 template <typename a1, typename a2, typename a3, typename a4, typename a5, typename a6, typename a7, typename a8>
 using signal8 = _signalN<a1, a2, a3, a4, a5, a6, a7, a8>;
 
-} // namespace threadUnSafe_sigslot
+} // namespace thread_unsafe_sigslot
