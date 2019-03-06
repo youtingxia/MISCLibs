@@ -1,4 +1,8 @@
 // created By MarvinZhai
+// http://sigslot.sourceforge.net/sigslot.pdf
+// Notice:
+// 1）signal Only Connect One slot
+// 2) args Lifetime, Copyable is recommended 
 
 #if __cplusplus < 201103L
 #error "Need C++11 or Higher stdandard Impl"
