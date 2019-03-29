@@ -31,6 +31,7 @@ static bool utf8_to_unicode(const std::string& utf8str,std::vector<uint64_t>& un
             if ((p+4) > pend) return false;
             if (BYTE_PREFIX_NOT_10(p+1) && BYTE_PREFIX_NOT_10(p+2) && BYTE_PREFIX_NOT_10(p+3)) return false;
             uint64_t uc = ((((*p)&0x7)<<18)|(((*(p+2))&0x3f)<<12)|(((*(p+3))&0x3f)<<6)|((*(p+4))&0x3f));
+            unicode.push_back(uc);
             p += 4;
             continue;
         } else {
