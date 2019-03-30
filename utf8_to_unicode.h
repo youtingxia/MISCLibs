@@ -9,7 +9,6 @@ static bool utf8_to_unicode(const std::string& utf8str,std::vector<uint32_t>& un
     const uint8_t* const pend = p + utf8str.size() - 1;
 #define BYTE_PREFIX_NOT_10(p) (0b10 != ((*(p))>>6))
     while (p < pend) {
-        printf("-%x-\n",*p);
         if (0x80 != ((*p)&0x80)) { // 0XXXXXXX - ASCI
             unicode.push_back(*p);
             p += 1;
