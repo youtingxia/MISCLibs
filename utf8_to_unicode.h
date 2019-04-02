@@ -17,6 +17,7 @@ static bool utf8_to_unicode(const std::string& utf8str,std::vector<uint32_t>& un
             if ((p+1) > pend) return false;
             if (BYTE_PREFIX_NOT_10(p+1)) return false;
             uint32_t uc = ((((*p)&0x1f)<<6)|((*(p+1))&0x3f));
+            unicode.push_back(uc);
             p += 2;
             continue;
         } else if (0b1110 == ((*p)>>4)) { // 1110XXXX 10XXXXXX 10XXXXXX
